@@ -7471,6 +7471,26 @@ body[data-type="link"] #page .page-title {
     padding: 0px 20px 0px;
   }
 }
+div#bannerGroup {
+  margin-right: 10px;
+  width: calc(51% - 10px) !important;
+}
+@media screen and (max-width: 768px) {
+  #home_top {
+    padding: 0px 15px;
+  }
+  #topPostGroup {
+    height: 280px;
+  }
+  #swiper_container_blog {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div#bannerGroup {
+    display: none !important;
+  }
+}
 #content-inner #recent-posts > .recent-post-item > .recent-post-info > .content {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -14169,6 +14189,11 @@ blockquote {
     border: none;
   }
 }
+#post #article-container h2 {
+  border-top: 1px dashed var(--anzhiyu-theme-op);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
 #post .post_share {
   margin: 8px 0 0;
   width: fit-content;
@@ -14995,6 +15020,12 @@ blockquote {
 .share-link .share-main .share-main-all .reward-dec {
   font-size: 12px;
 }
+.post-tools .post-tools-left > div {
+  margin: 0;
+}
+.post-tools .post-tools-left {
+  width: auto;
+}
 .relatedPosts {
   margin-top: 1.25rem;
 }
@@ -15106,7 +15137,7 @@ blockquote {
 .post-reward .reward-main {
   position: absolute;
   bottom: 40px;
-  left: 0;
+  left: -70%;
   z-index: 90;
   display: none;
   padding: 0px 0px 15px;
