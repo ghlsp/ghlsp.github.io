@@ -5379,7 +5379,7 @@ span.tags-punctuation {
     height: 100%;
     top: 0;
     left: 0;
-    box-shadow: 0 -109px 133px -9px #df5b40 inset;
+    box-shadow: 0 -109px 133px -9px #574f53 inset;
   }
   .topGroup .todayCard.hide {
     opacity: 0;
@@ -8967,10 +8967,10 @@ div#banners .bannerText {
   }
 }
 [data-theme=dark] {
-  --efu-theme: #ffc848;
-  --efu-theme-op: rgba(255,200,72,0.137);
-  --efu-theme-op-deep: rgba(255,200,72,0.867);
-  --efu-theme-none: rgba(255,200,72,0);
+  --efu-theme: #ffc868;
+  --efu-theme-op: rgba(255,200,104,0.137);
+  --efu-theme-op-deep: rgba(255,200,104,0.867);
+  --efu-theme-none: rgba(255,200,104,0);
   --efu-blue: #0084ff;
   --efu-red: #ff3842;
   --efu-pink: #d44040;
@@ -9012,11 +9012,11 @@ div#banners .bannerText {
   --efu-hltools-bg: #21232a;
 }
 [data-theme=light] {
-  --efu-theme: #425aef;
-  --efu-theme-op: rgba(66,90,239,0.137);
-  --efu-theme-op-deep: rgba(66,90,239,0.867);
+  --efu-theme: #229453;
+  --efu-theme-op: rgba(34,148,83,0.137);
+  --efu-theme-op-deep: rgba(34,148,83,0.867);
   --efu-theme-op-light: rgba(66,89,239,0.051);
-  --efu-theme-none: rgba(66,90,239,0);
+  --efu-theme-none: rgba(34,148,83,0);
   --efu-blue: #425aef;
   --efu-red: #f04a63;
   --efu-pink: #ff7c7c;
