@@ -2073,6 +2073,13 @@ span.tags-punctuation i {
   font-size: 14px;
   line-height: 32px;
 }
+.memorial {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 .article-container {
   overflow-wrap: break-word;
 }
@@ -2274,12 +2281,6 @@ span.tags-punctuation i {
   margin: 0.5rem 0;
   border-width: 0;
   border-top: 1px dashed var(--efu-theme-op);
-}
-.medium-zoom--opened .medium-zoom-overlay {
-  z-index: 10;
-}
-.medium-zoom-image--opened {
-  z-index: 11;
 }
 .article-sort-title {
   font-weight: 700;
