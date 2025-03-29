@@ -2384,6 +2384,7 @@ span.tags-punctuation i {
   flex-direction: column;
   gap: var(--gap);
   animation: slide-in 0.6s 0.3s backwards;
+  z-index: 10;
   order: 2;
 }
 .hide-aside #aside-content {
@@ -7449,8 +7450,8 @@ div#banners .bannerText {
   opacity: 0;
 }
 #page h1.page-title {
-  display: inline;
-  margin: 0.4rem 0 1rem;
+  margin: 0.4rem 1rem 1rem;
+  text-align: center;
 }
 #page {
   background: 0 0;
