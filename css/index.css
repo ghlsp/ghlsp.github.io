@@ -7059,6 +7059,115 @@ i.bber-gotobb {
   margin: 0.5rem 0;
   line-height: 1;
 }
+.percentage-label {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  color: var(--efu-card-bg);
+  font-weight: bold;
+  top: 10px;
+  white-space: nowrap;
+  transition: left 0.5s linear;
+  visibility: hidden;
+}
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.time-labels > div {
+  font-size: 14px;
+  color: var(--efu-fontcolor);
+}
+.tenyear-timeline {
+  width: 100%;
+  background-color: var(--efu-background);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+}
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: var(--efu-main);
+  position: absolute;
+  animation-delay: -0.1s;
+  border-radius: 0.5rem;
+  animation: renamedProgressAnimation 2s linear forwards;
+}
+.past-time {
+  animation: renamedPastTimeAnimation 3s linear forwards;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  transform-origin: left;
+}
+@-moz-keyframes renamedProgressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-percentage, 0);
+  }
+}
+@-webkit-keyframes renamedProgressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-percentage, 0);
+  }
+}
+@-o-keyframes renamedProgressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-percentage, 0);
+  }
+}
+@keyframes renamedProgressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-percentage, 0);
+  }
+}
+@-moz-keyframes renamedPastTimeAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(var(--past-time-percentage, 0));
+  }
+}
+@-webkit-keyframes renamedPastTimeAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(var(--past-time-percentage, 0));
+  }
+}
+@-o-keyframes renamedPastTimeAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(var(--past-time-percentage, 0));
+  }
+}
+@keyframes renamedPastTimeAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(var(--past-time-percentage, 0));
+  }
+}
 #about-page .author-info {
   display: flex;
   align-items: center;
@@ -7412,6 +7521,88 @@ i.bber-gotobb {
 }
 #about-page .author-content-item.careers .careers-item .name {
   color: var(--efu-secondtext);
+}
+#about-page .author-content-item.like-technology {
+  background-size: cover;
+  min-height: 230px;
+  color: var(--efu-white);
+}
+#about-page .author-content-item.like-technology::after {
+  box-shadow: 0 -69px 203px 11px #050b20 inset;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#about-page .author-content-item.like-music {
+  background-size: cover;
+  min-height: 400px;
+  color: var(--efu-white);
+  overflow: hidden;
+}
+#about-page .author-content-item.like-music::after {
+  box-shadow: 0 -69px 203px 11px #0e0e0e inset;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#about-page .author-content-item .card-content {
+  z-index: 2;
+}
+#about-page .about-statistic {
+  min-height: 380px;
+  background-size: cover;
+  color: var(--efu-white);
+  overflow: hidden;
+}
+#about-page .about-statistic::after {
+  box-shadow: 0 -159px 173px 71px #0f1114 inset;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#about-page .about-statistic #statistic {
+  font-size: 16px;
+  border-radius: 15px;
+  width: 100%;
+  color: var(--efu-white);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+}
+#about-page .about-statistic #statistic div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+#about-page .about-statistic #statistic div span:first-child {
+  opacity: 0.8;
+  font-size: 0.6rem;
+}
+#about-page .about-statistic #statistic div span:last-child {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1;
+  white-space: nowrap;
+}
+#about-page .about-statistic .banner-button {
+  background: var(--efu-white-op);
+}
+#about-page .about-statistic .banner-button:hover {
+  background: var(--efu-theme);
 }
 div#banners {
   display: flex;
