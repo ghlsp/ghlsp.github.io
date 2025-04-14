@@ -2056,7 +2056,7 @@ i.solitude {
   }
 }
 .layout > #post {
-  padding: 0;
+  padding: 0.1rem 0.5rem;
 }
 .show {
   opacity: 1 !important;
@@ -2093,7 +2093,7 @@ span.tags-punctuation i {
 }
 @media screen and (max-width: 768px) {
   .post .article-container {
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 1rem 0.5rem;
   }
 }
 .article-container iframe {
