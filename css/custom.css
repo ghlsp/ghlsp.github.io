@@ -36,14 +36,14 @@
    
 [data-theme=light] #nav .menus_items .menus_item .menus_item_child {
     background-color: #ffffff4f!important;
-    backdrop-filter: blur(7px)!important;
-    -webkit-backdrop-filter: blur(7px)!important
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
 }
 
 [data-theme=dark] #nav .menus_items .menus_item .menus_item_child {
     background-color: #1d1e224f!important;
-    backdrop-filter: blur(7px)!important;
-    -webkit-backdrop-filter: blur(7px)!important
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
 }
 
 [data-theme=dark] #page-header.nav-fixed #nav {
@@ -56,8 +56,8 @@
 
 #page-header.nav-fixed #nav {
     outline: 1px #7c7c7c43 solid!important;
-    backdrop-filter: blur(7px)!important;
-    -webkit-backdrop-filter: blur(7px)!important
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
 }
 
 @media screen and (max-width: 768px) {
@@ -80,12 +80,10 @@
 
 [data-theme=dark] #page-header.nav-fixed #nav {
     background: #1d1e224f!important;
-    backdrop-filter: blur(7px)!important;
-    -webkit-backdrop-filter: blur(7px)!important
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
 }
 
 
-#recent-posts>.recent-post-item:not(a):hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,.4);
-    transform: scale(1.015);
-}
+
+
