@@ -2122,7 +2122,7 @@ i.solitude {
   }
 }
 .layout > #post {
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
 }
 .show {
   opacity: 1 !important;
@@ -9758,6 +9758,51 @@ div#banners .bannerText {
   display: none;
   text-align: left;
 }
+.post-ai .ai-explanation:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  margin-left: 2px;
+  background: var(--efu-lighttext);
+  vertical-align: bottom;
+  animation: blink-underline 1s ease-in-out infinite;
+  transition: all 0.3s;
+  position: relative;
+  bottom: 3px;
+}
+@-moz-keyframes blink-underline {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink-underline {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink-underline {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink-underline {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .post-ai .ai-explanation .blinking-cursor {
   background-color: var(--efu-lighttext);
   width: 14px;
@@ -9774,6 +9819,9 @@ div#banners .bannerText {
   display: inline-block;
   opacity: 0;
   animation: chat-float 0.5s ease forwards;
+}
+.ai-explanation.fast-blink:after {
+  animation: blink-underline-fast 0.4s ease-in-out infinite;
 }
 @-moz-keyframes chat-float {
   0% {
@@ -9813,6 +9861,38 @@ div#banners .bannerText {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@-moz-keyframes blink-underline-fast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink-underline-fast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink-underline-fast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink-underline-fast {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 #post {
