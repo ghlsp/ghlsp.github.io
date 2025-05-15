@@ -6253,7 +6253,6 @@ div.console_recentcomments {
 }
 @media screen and (max-width: 1300px) {
   div.console_recentcomments {
-    overflow-y: scroll;
     scrollbar-width: none;
   }
 }
