@@ -1753,7 +1753,7 @@ body {
   min-height: 100%;
   background: var(--efu-background);
   color: var(--efu-fontcolor);
-  font-size: 16px;
+  font-size: 15px;
   font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
   line-height: 2;
   -webkit-tap-highlight-color: transparent;
@@ -1857,7 +1857,7 @@ kbd,
 samp,
 pre {
   font-family: "monospace", monospace;
-  font-size: 16px;
+  font-size: 15px;
 }
 small {
   font-size: 80%;
@@ -3563,132 +3563,6 @@ span.tags-punctuation i {
 }
 #footer-bar > div > div.footer-bar-left > span {
   margin-right: 1rem;
-}
-#loading-box {
-  user-select: none;
-}
-#loading-box .loading-bg {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: var(--efu-background);
-  z-index: 1999;
-  opacity: 1;
-  transition: 0.2s;
-  pointer-events: all;
-  animation: showLoading 0.3s 0s backwards;
-}
-#loading-box.loaded .loading-bg {
-  pointer-events: none;
-  transition: 0.2s;
-  animation: hideLoading 0.3s 0s forwards;
-}
-#loading-box .loading-img {
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  animation-duration: 0.2s;
-  animation-name: loadingAction;
-  border-radius: 50px;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@-moz-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-webkit-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-o-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-moz-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-o-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-moz-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 #page-header {
   position: relative;
@@ -11248,4 +11122,21 @@ button.el-button.tk-cancel.el-button--default.el-button--small {
   60% {
     opacity: 0.3;
   }
+}
+#universe {
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+[data-theme=light] #universe {
+  display: none;
 }
