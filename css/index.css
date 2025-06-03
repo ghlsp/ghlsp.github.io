@@ -3564,6 +3564,132 @@ span.tags-punctuation i {
 #footer-bar > div > div.footer-bar-left > span {
   margin-right: 1rem;
 }
+#loading-box {
+  user-select: none;
+}
+#loading-box .loading-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: var(--efu-background);
+  z-index: 1999;
+  opacity: 1;
+  transition: 0.2s;
+  pointer-events: all;
+  animation: showLoading 0.3s 0s backwards;
+}
+#loading-box.loaded .loading-bg {
+  pointer-events: none;
+  transition: 0.2s;
+  animation: hideLoading 0.3s 0s forwards;
+}
+#loading-box .loading-img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  animation-duration: 0.2s;
+  animation-name: loadingAction;
+  border-radius: 50px;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-moz-keyframes loadingAction {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@-webkit-keyframes loadingAction {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@-o-keyframes loadingAction {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@keyframes loadingAction {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@-moz-keyframes hideLoading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hideLoading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes hideLoading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hideLoading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes showLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes showLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showLoading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #page-header {
   position: relative;
   width: 100%;
@@ -6224,6 +6350,58 @@ time.comment-time {
   color: var(--efu-secondtext);
   margin-left: auto;
 }
+#bbTimeList {
+  background: var(--efu-card-bg);
+  border-radius: 12px;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  border: var(--style-border);
+  transition: 0.3s;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+  user-select: none;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  animation: slide-in 0.6s 0s backwards;
+  margin-bottom: 0.5rem;
+}
+#bbTimeList.more-page {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1300px) {
+  #bbTimeList:hover {
+    border: var(--style-border-hover);
+    box-shadow: var(--efu-shadow-main);
+  }
+}
+@media screen and (max-width: 768px) {
+  #bbTimeList {
+    margin: 0;
+    background: var(--efu-background);
+    border: none;
+    padding: 0 0.2rem;
+  }
+}
+i.bber-logo,
+i.bber-gotobb {
+  transition: 0.3s;
+  cursor: pointer;
+}
+i.bber-logo:hover,
+i.bber-gotobb:hover {
+  opacity: 0.8;
+  color: var(--efu-theme);
+}
+i.bber-logo {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+i.bber-gotobb {
+  font-size: 16px;
+  margin-left: 1rem;
+}
 #bber {
   margin-top: 0.5rem;
   width: 100%;
@@ -6304,6 +6482,69 @@ time.comment-time {
 }
 #bber .datafrom i {
   margin-right: 4px;
+}
+#bber .bber-music {
+  width: 100%;
+  height: 90px;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: var(--style-border-always);
+  background: var(--efu-secondbg);
+}
+#bber .bber-music .aplayer-lrc {
+  display: none;
+}
+#bber .aplayer {
+  margin: 0;
+}
+#bber .aplayer .aplayer-body {
+  background-color: var(--efu-card-bg);
+}
+#bber .aplayer .aplayer-info .aplayer-music {
+  height: 23px;
+}
+#bber .aplayer .aplayer-info .aplayer-music .aplayer-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--efu-fontcolor);
+}
+#bber .aplayer .aplayer-info .aplayer-controller {
+  align-items: center;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  padding: 0;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+  background: var(--efu-gray);
+  height: 8px;
+  border-radius: 12px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+  height: 100%;
+  border-radius: 12px;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+  display: none;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+  height: 100%;
+  border-radius: 12px;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap:hover .aplayer-bar {
+  height: 12px;
+}
+#bber .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  position: initial;
+}
+#bber .aplayer.aplayer-withlrc .aplayer-pic {
+  height: 82px;
+  width: 82px;
+  margin: 4px;
+  border-radius: 4px;
 }
 #bber .bber-video {
   position: relative;
@@ -10814,314 +11055,6 @@ button.el-button.tk-cancel.el-button--default.el-button--small {
 }
 .OwO .OwO-body .OwO-bar .OwO-packages li {
   line-height: 45px !important;
-}
-.aplayer.aplayer-narrow .aplayer-body,
-.aplayer.aplayer-narrow .aplayer-pic {
-  height: 66px;
-  width: 66px;
-}
-#nav-music {
-  display: flex;
-  align-items: center;
-  z-index: 12;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  cursor: pointer;
-  transition: all 0.5s, left 0s;
-  transform-origin: left bottom;
-  box-shadow: var(--efu-shadow-border);
-  border-radius: 40px;
-  overflow: hidden;
-}
-#nav-music:active {
-  transform: scale(0.97);
-}
-#nav-music.playing {
-  border: var(--style-border);
-  box-shadow: 0 0px 12px -3px var(--efu-none);
-  animation: playingShadow 5s linear infinite;
-}
-#nav-music.playing .aplayer.aplayer-withlrc .aplayer-pic {
-  box-shadow: 0 0 14px rgba(255,255,255,0.651);
-  transform: rotate(0deg) scale(1.1);
-  border-color: var(--efu-white);
-  animation-play-state: running;
-}
-#nav-music.playing .aplayer.aplayer-withlrc .aplayer-info {
-  color: var(--efu-white);
-}
-#nav-music.playing #nav-music-hoverTips {
-  width: 0;
-}
-#nav-music.playing .aplayer {
-  background: var(--efu-main);
-  border: var(--style-border-hover);
-  backdrop-filter: saturate(180%) blur(20px);
-  transform: translateZ(0);
-}
-#nav-music.playing .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
-  animation-play-state: running;
-}
-#nav-music:hover:not(.playing) #nav-music-hoverTips {
-  opacity: 1;
-}
-#nav-music .aplayer.aplayer-withlrc .aplayer-pic {
-  height: 25px;
-  width: 25px;
-  border-radius: 40px;
-  z-index: 1;
-  transition: 0.3s;
-  transform: rotate(0deg) scale(1);
-  border: var(--style-border-always);
-  animation: changeright 24s linear infinite;
-  animation-play-state: paused;
-}
-#nav-music .aplayer.aplayer-withlrc .aplayer-info {
-  height: 100%;
-  color: var(--efu-fontcolor);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-#nav-music #nav-music-hoverTips {
-  color: var(--efu-white);
-  background: var(--efu-main);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  border-radius: 40px;
-  opacity: 0;
-  font-size: 12px;
-  z-index: 2;
-  transition: 0.3s;
-}
-#nav-music .aplayer {
-  background: var(--efu-card-bg);
-  border-radius: 60px;
-  height: 41px;
-  display: flex;
-  margin: 0;
-  transition: 0.3s;
-  border: var(--style-border);
-  box-shadow: none;
-}
-#nav-music .aplayer .aplayer-notice,
-#nav-music .aplayer .aplayer-miniswitcher,
-#nav-music .aplayer .aplayer-list {
-  display: none;
-}
-#nav-music .aplayer .aplayer-body {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-#nav-music .aplayer .aplayer-info .aplayer-music {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 12px 0 8px;
-  cursor: pointer;
-  z-index: 1;
-  height: 100%;
-}
-#nav-music .aplayer .aplayer-info .aplayer-music .aplayer-title {
-  cursor: pointer;
-  line-height: 1;
-  display: inline-block;
-  white-space: nowrap;
-  max-width: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: 0.3s;
-  user-select: none;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
-  margin: 0;
-  padding: 0;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
-  height: 100%;
-  background: 0 0;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
-  display: none;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
-  height: 100%;
-  opacity: 0.1;
-  background-color: var(--efu-white) !important;
-  animation: lightBar 5s ease infinite;
-  animation-play-state: paused;
-}
-#nav-music .aplayer .aplayer-pic {
-  pointer-events: none;
-  margin-left: 8px;
-}
-#nav-music .aplayer .aplayer-pic .aplayer-button {
-  bottom: 50%;
-  right: 50%;
-  transform: translate(50%, 50%);
-  margin: 0;
-  transition: 0.3s;
-  pointer-events: all;
-}
-#nav-music .aplayer .aplayer-pic:has(.aplayer-button.aplayer-play) {
-  animation-play-state: paused;
-  transform: rotate(0deg) scale(1) !important;
-}
-#nav-music .aplayer .aplayer-info .aplayer-controller .aplayer-time,
-#nav-music .aplayer .aplayer-info .aplayer-music .aplayer-author {
-  display: none;
-}
-#nav-music .aplayer.aplayer-withlist .aplayer-info {
-  border: none;
-}
-#nav-music .aplayer .aplayer-lrc {
-  width: 0;
-  opacity: 0;
-  transition: 0.3s;
-  margin-bottom: -15px;
-}
-#nav-music .aplayer .aplayer-lrc p.aplayer-lrc-current {
-  color: var(--efu-white);
-  border: none;
-  min-height: 20px;
-  filter: none;
-}
-#nav-music .aplayer .aplayer-lrc:after,
-#nav-music .aplayer .aplayer-lrc:before {
-  display: none;
-}
-#nav-music .aplayer .aplayer-lrc p {
-  color: rgba(255,255,255,0.702);
-  filter: blur(0.8px);
-}
-#nav-music.stretch .aplayer.aplayer-withlrc .aplayer-lrc {
-  width: 200px;
-  margin-left: 8px;
-  opacity: 1;
-}
-.aplayer-thumb {
-  width: 0 !important;
-  height: 0 !important;
-}
-@-moz-keyframes changeright {
-  0%, 50%, 100% {
-    transform: rotate(0deg) scale(1.1);
-    box-shadow: 0 0 2px rgba(255,255,255,0);
-  }
-  25%, 75% {
-    transform: rotate(90deg) scale(1.1);
-    box-shadow: 0 0 14px #fff;
-  }
-}
-@-webkit-keyframes changeright {
-  0%, 50%, 100% {
-    transform: rotate(0deg) scale(1.1);
-    box-shadow: 0 0 2px rgba(255,255,255,0);
-  }
-  25%, 75% {
-    transform: rotate(90deg) scale(1.1);
-    box-shadow: 0 0 14px #fff;
-  }
-}
-@-o-keyframes changeright {
-  0%, 50%, 100% {
-    transform: rotate(0deg) scale(1.1);
-    box-shadow: 0 0 2px rgba(255,255,255,0);
-  }
-  25%, 75% {
-    transform: rotate(90deg) scale(1.1);
-    box-shadow: 0 0 14px #fff;
-  }
-}
-@keyframes changeright {
-  0%, 50%, 100% {
-    transform: rotate(0deg) scale(1.1);
-    box-shadow: 0 0 2px rgba(255,255,255,0);
-  }
-  25%, 75% {
-    transform: rotate(90deg) scale(1.1);
-    box-shadow: 0 0 14px #fff;
-  }
-}
-@-moz-keyframes playingShadow {
-  0%, 100% {
-    box-shadow: 0 0px 12px -3px var(--efu-none);
-  }
-  50% {
-    box-shadow: 0 0px 12px 0px var(--efu-main);
-  }
-}
-@-webkit-keyframes playingShadow {
-  0%, 100% {
-    box-shadow: 0 0px 12px -3px var(--efu-none);
-  }
-  50% {
-    box-shadow: 0 0px 12px 0px var(--efu-main);
-  }
-}
-@-o-keyframes playingShadow {
-  0%, 100% {
-    box-shadow: 0 0px 12px -3px var(--efu-none);
-  }
-  50% {
-    box-shadow: 0 0px 12px 0px var(--efu-main);
-  }
-}
-@keyframes playingShadow {
-  0%, 100% {
-    box-shadow: 0 0px 12px -3px var(--efu-none);
-  }
-  50% {
-    box-shadow: 0 0px 12px 0px var(--efu-main);
-  }
-}
-@-moz-keyframes lightBar {
-  0%, 100% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.3;
-  }
-}
-@-webkit-keyframes lightBar {
-  0%, 100% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.3;
-  }
-}
-@-o-keyframes lightBar {
-  0%, 100% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.3;
-  }
-}
-@keyframes lightBar {
-  0%, 100% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.3;
-  }
 }
 #universe {
   display: block;
