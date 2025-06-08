@@ -1,4 +1,65 @@
 @charset "UTF-8";
+.article-container a.tag-link {
+  background: var(--efu-secondbg);
+  border-radius: 8px !important;
+  display: flex;
+  border: var(--style-border);
+  flex-direction: column;
+  padding: 0.5rem 1rem !important;
+  border-width: 1px;
+  margin: 1rem 0;
+}
+.article-container a.tag-link:hover {
+  background: var(--efu-main);
+  border: var(--style-border-hover) !important;
+}
+.article-container a.tag-link:hover .tag-link-tips {
+  color: var(--efu-white);
+  border-bottom-color: var(--efu-white);
+}
+.article-container a.tag-link:hover i {
+  opacity: 1;
+}
+.article-container a.tag-link i {
+  transition: 0.3s;
+  margin-left: auto;
+  opacity: 0.6;
+}
+.article-container a.tag-link .tag-link-bottom {
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.article-container a.tag-link .tag-link-bottom .tag-link-left {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background-size: cover;
+  border-radius: 8px;
+  background-color: var(--efu-card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article-container a.tag-link .tag-link-bottom .tag-link-left i {
+  padding: 0;
+  margin: auto;
+  font-size: 24px;
+  color: var(--efu-fontcolor);
+}
+.article-container a.tag-link .tag-link-bottom .tag-link-right {
+  margin-left: 1rem;
+  max-width: calc(100% - 76px - 1rem);
+}
+.article-container .tag-link-tips {
+  border-bottom: var(--style-border);
+  padding-bottom: 4px;
+  font-size: 12px;
+  color: var(--efu-gray);
+  font-weight: 400;
+  transition: 0.3s;
+}
 .red {
   color: var(--efu-red);
 }
@@ -5559,7 +5620,7 @@ span.tags-punctuation {
     height: 100%;
     top: 0;
     left: 0;
-    box-shadow: 0 -109px 133px -9px #574f53 inset;
+    box-shadow: 0 -109px 133px -9px rgba(0,0,0,0) 0 inset;
   }
   .topGroup .todayCard.hide {
     opacity: 0;
@@ -9915,8 +9976,8 @@ div#banners .bannerText {
   --style-border-hover-always: 1px solid var(--efu-theme);
   --style-border-dashed: 1px dashed var(--efu-theme-op);
   --style-border-forever: 2px solid var(--efu-lighttext);
-  --efu-hl-bg: #1b1c20;
-  --efu-hltools-bg: #21232a;
+  --efu-hl-bg: #1c1e1e;
+  --efu-hltools-bg: #454a50;
 }
 [data-theme=light] {
   --efu-theme: #229453;
@@ -9963,7 +10024,7 @@ div#banners .bannerText {
   --style-border-forever: 2px solid var(--efu-main);
   --efu-navbg: var(--efu-theme-op);
   --efu-hl-bg: #fff;
-  --efu-hltools-bg: #f7f7f9;
+  --efu-hltools-bg: #e7e7e7;
 }
 @media screen and (max-width: 768px) {
   :root {
@@ -9972,13 +10033,27 @@ div#banners .bannerText {
   }
 }
 figure.highlight .highlight-tools .copy-button {
-  right: 0.7rem;
+  right: 1.7rem;
+}
+figure.highlight .highlight-tools:after {
+  position: absolute;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fc625d;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+}
+figure.highlight .highlight-tools .expand {
+  right: 0;
+}
+figure.highlight .highlight-tools .expand + .code-lang {
+  left: 75px;
 }
 figure.highlight .highlight-tools.closed .expand {
-  transform: rotate(-90deg);
-}
-figure.highlight .expand + .code-lang {
-  left: 1.7rem;
+  transform: rotate(90deg);
 }
 figure.highlight table::-webkit-scrollbar {
   color: var(--efu-secondbg);
@@ -9992,10 +10067,10 @@ figure.highlight .attr,
 figure.highlight .variable,
 figure.highlight .literal,
 figure.highlight .property {
-  color: #ff79c6;
+  color: #00f;
 }
 figure.highlight .number {
-  color: #bd93f9;
+  color: #098658;
 }
 figure.highlight .string {
   color: #a31515;
@@ -10019,21 +10094,21 @@ figure.highlight .deletion {
 [data-theme=dark] figure.highlight .attr,
 [data-theme=dark] figure.highlight .variable,
 [data-theme=dark] figure.highlight .property {
-  color: #ff79c6;
+  color: #569cd6;
 }
 [data-theme=dark] figure.highlight .number {
-  color: #bd93f9;
+  color: #b5cea8;
 }
 [data-theme=dark] figure.highlight .string {
-  color: #f1fa8c;
+  color: #ce9178;
 }
 [data-theme=dark] figure.highlight .built_in,
 [data-theme=dark] figure.highlight .title,
 [data-theme=dark] figure.highlight .params {
-  color: #50fa7b;
+  color: #dcdcaa;
 }
 [data-theme=dark] figure.highlight .emphasis {
-  color: #8be9fd;
+  color: #6a9955;
 }
 [data-theme=dark] figure.highlight .addition {
   color: #35cd4b;
