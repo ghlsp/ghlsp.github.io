@@ -10716,11 +10716,11 @@ div#banners .bannerText {
   --efu-hltools-bg: #454a50;
 }
 [data-theme=light] {
-  --efu-theme: #229453;
-  --efu-theme-op: rgba(34,148,83,0.137);
-  --efu-theme-op-deep: rgba(34,148,83,0.867);
+  --efu-theme: #1a1b1f;
+  --efu-theme-op: rgba(26,27,31,0.137);
+  --efu-theme-op-deep: rgba(26,27,31,0.867);
   --efu-theme-op-light: rgba(66,89,239,0.051);
-  --efu-theme-none: rgba(34,148,83,0);
+  --efu-theme-none: rgba(26,27,31,0);
   --efu-blue: #425aef;
   --efu-red: #f04a63;
   --efu-pink: #ff7c7c;
