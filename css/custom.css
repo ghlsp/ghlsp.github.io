@@ -2,55 +2,55 @@
        display: none;
    }
    
-/*[data-theme=light] #nav .menus_items .menus_item .menus_item_child {*/
-    /*background-color: #ffffff4f!important;*/
-    /*backdrop-filter: blur(20px)!important;*/
-    /*-webkit-backdrop-filter: blur(20px)!important*/
-/*}*/
-/**/
-/*[data-theme=dark] #nav .menus_items .menus_item .menus_item_child {*/
-    /*background-color: #1d1e224f!important;*/
-    /*backdrop-filter: blur(20px)!important;*/
-    /*-webkit-backdrop-filter: blur(20px)!important*/
-/*}*/
-/**/
-/*[data-theme=dark] #page-header.nav-fixed #nav {*/
-    /*background: #0000006f!important*/
-/*}*/
-/**/
-/*[data-theme=light] #page-header.nav-fixed #nav {*/
-    /*background: #ffffff4f!important;*/
-/*}*/
-/**/
-/*#page-header.nav-fixed #nav {*/
-    /*outline: 1px #7c7c7c43 solid!important;*/
-    /*backdrop-filter: blur(20px)!important;*/
-    /*-webkit-backdrop-filter: blur(20px)!important*/
-/*}*/
-/**/
-/*@media screen and (max-width: 768px) {*/
-    /*#nav {*/
-        /*background:#fff0!important*/
-    /*}*/
-/*}*/
-/**/
-/*@media screen and (max-width: 768px) {*/
-    /*body[data-type=post] #page-header #nav {*/
-        /*--font-color:#fff*/
-    /*}*/
-/*}*/
-/**/
-/*@media screen and (max-width: 768px) {*/
-    /*#page-header.nav-fixed #nav {*/
-    /*--font-color: var(--efu-fontcolor)!important;*/
-    /*}*/
-/*}*/
-/**/
-/*[data-theme=dark] #page-header.nav-fixed #nav {*/
-    /*background: #1d1e224f!important;*/
-    /*backdrop-filter: blur(20px)!important;*/
-    /*-webkit-backdrop-filter: blur(20px)!important*/
-/*}*/
+[data-theme=light] #nav .menus_items .menus_item .menus_item_child {
+    background-color: #ffffff4f!important;
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
+}
+
+[data-theme=dark] #nav .menus_items .menus_item .menus_item_child {
+    background-color: #1d1e224f!important;
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
+}
+
+[data-theme=dark] #page-header.nav-fixed #nav {
+    background: #0000006f!important
+}
+
+[data-theme=light] #page-header.nav-fixed #nav {
+    background: #ffffff4f!important;
+}
+
+#page-header.nav-fixed #nav {
+    outline: 1px #7c7c7c43 solid!important;
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
+}
+
+@media screen and (max-width: 768px) {
+    #nav {
+        background:#fff0!important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body[data-type=post] #page-header #nav {
+        --font-color:#fff
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #page-header.nav-fixed #nav {
+    --font-color: var(--efu-fontcolor)!important;
+    }
+}
+
+[data-theme=dark] #page-header.nav-fixed #nav {
+    background: #1d1e224f!important;
+    backdrop-filter: blur(20px)!important;
+    -webkit-backdrop-filter: blur(20px)!important
+}
 
 
 /* 波浪css */
